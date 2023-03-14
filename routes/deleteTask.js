@@ -11,7 +11,7 @@ router.delete("/", verify, async (req, res) => {
 
   try {
     let deleteTask = await Task.deleteOne({ _id: deleteId });
-    res.send(deleteTask);
+      res.send({ response: "Successfuly deleted the task" });
   } catch (err) {
     res.status(400).send(err);
   }
