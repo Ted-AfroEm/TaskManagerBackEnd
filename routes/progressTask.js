@@ -14,7 +14,7 @@ router.patch("/", verify, async (req, res) => {
       { _id: id },
       { progress: progress }
     );
-    res.send(progressUpdate);
+    res.send({ response: "Successfuly updated the task progress" });
   } catch (err) {
     res.status(400).send(err);
   }
