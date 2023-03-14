@@ -17,24 +17,24 @@ const deleteTask = require("./routes/deleteTask");
 const progressTask = require("./routes/progressTask");
 
 // for cloud Database
-//const { DB_CONNECT } = require("./config/constants");
+const { DB_CONNECT } = require("./config/constants");
 
-//connect to DB
-// mongoose.connect(
-//   DB_CONNECT,
-//   { useNewUrlParser: true, useUnifiedTopology: true },
-//   () => console.log("Connected to DB!")
-// );
-
-//for local Database
+connect to DB
 mongoose.connect(
-  "mongodb://localhost/taskManager",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
+  DB_CONNECT,
+  { useNewUrlParser: true, useUnifiedTopology: true },
   () => console.log("Connected to DB!")
 );
+
+//for local Database
+// mongoose.connect(
+//   "mongodb://localhost/taskManager",
+//   {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   },
+//   () => console.log("Connected to DB!")
+// );
 
 //middleware
 app.use(express.json());
