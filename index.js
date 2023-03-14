@@ -20,7 +20,7 @@ const progressTask = require("./routes/progressTask");
 // for cloud Database
 const { DB_CONNECT } = require("./config/constants");
 
-connect to DB
+// connect to DB
 mongoose.connect(
   DB_CONNECT,
   { useNewUrlParser: true, useUnifiedTopology: true },
